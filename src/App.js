@@ -13,17 +13,15 @@ import Resume from "./pages/Resume";
 function App() {
   return (
     <Router>
-      <div>
-        <Header />
-        <Wrapper>
-          <Route exact path="/" component={About} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/projects" component={Projects} />
-          <Route exact path="/contact" component={Contact} />
-          <Route exact path="/resume" component={Resume} />
-        </Wrapper>
-        <Footer />
-      </div>
+      <Header />
+      <Wrapper>
+        <Route exact path="/" component={About} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/projects" component={Projects} />
+        <Route exact path="/contact" component={Contact} />
+        <Route exact path="/resume" component={Resume} />
+      </Wrapper>
+      <Footer />
     </Router>
   );
 }

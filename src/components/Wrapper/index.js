@@ -1,7 +1,8 @@
 import React from "react";
+import { Segment } from "semantic-ui-react";
 
 const Wrapper = (props) => (
-  <div className="container">
+  <div>
     <main className="wrapper" {...props} />
   </div>
 );
