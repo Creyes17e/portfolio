@@ -6,6 +6,7 @@ import project1 from "../assets/images/project1.JPG";
 import notetaker from "../assets/images/notetaker.JPG";
 import ideaexpo from "../assets/images/ideaexpo.JPG";
 import weather from "../assets/images/weather.PNG";
+import budget from "../assets/images/budget.JPG";
 
 const Projects = () => (
   <div>
@@ -17,10 +18,10 @@ const Projects = () => (
       }
       `}
       </style>
-      <Card.Group itemsPerRow={3}>
+      <Card.Group itemsPerRow={3} centered>
         <Card>
-          <Image src={scheduler} />
-          <Card.Content>
+          <Image src={scheduler} style={{ height: "16rem" }} />
+          <Card.Content textAlign="center">
             <Card.Header>
               <a
                 href="https://creyes17e.github.io/HW5-WorkDayScheduler/"
@@ -41,7 +42,7 @@ const Projects = () => (
         </Card>
         <Card>
           <Image src={burger} />
-          <Card.Content>
+          <Card.Content textAlign="center">
             <Card.Header>
               <a
                 href="https://fringuante-moliere-60605.herokuapp.com"
@@ -59,7 +60,7 @@ const Projects = () => (
         </Card>
         <Card>
           <Image src={project1} />
-          <Card.Content>
+          <Card.Content textAlign="center">
             <Card.Header>
               <a
                 href="https://ta05.github.io/Deal-Or-No-Deal/intro.html"
@@ -80,7 +81,7 @@ const Projects = () => (
         </Card>
         <Card>
           <Image src={ideaexpo} />
-          <Card.Content>
+          <Card.Content textAlign="center">
             <Card.Header>
               <a href="http://ideaexpo.herokuapp.com/" target="blank">
                 IdeaEXPO
@@ -94,8 +95,8 @@ const Projects = () => (
           </Card.Content>
         </Card>
         <Card>
-          <Image src={weather} />
-          <Card.Content>
+          <Image src={weather} style={{ height: "18.5rem" }} />
+          <Card.Content textAlign="center">
             <Card.Header>
               <a
                 href="https://creyes17e.github.io/HW6-WeatherDashboard/"
@@ -115,8 +116,8 @@ const Projects = () => (
           </Card.Content>
         </Card>
         <Card>
-          <Image src={notetaker} />
-          <Card.Content>
+          <Image src={notetaker} style={{ height: "18.5rem" }} />
+          <Card.Content textAlign="center">
             <Card.Header>
               <a href="https://vast-shore-69093.herokuapp.com/" target="blank">
                 Note-Taker
@@ -125,6 +126,27 @@ const Projects = () => (
             <Card.Content extra>
               <a
                 href="https://github.com/Creyes17e/note-taker.git"
+                target="blank"
+              >
+                Github Repo
+              </a>
+            </Card.Content>
+          </Card.Content>
+        </Card>
+        <Card>
+          <Image src={budget} style={{ height: "18.5rem" }} />
+          <Card.Content textAlign="center">
+            <Card.Header>
+              <a
+                href="https://mysterious-chamber-97655.herokuapp.com/"
+                target="blank"
+              >
+                Budget Tracker
+              </a>
+            </Card.Header>
+            <Card.Content extra>
+              <a
+                href="https://github.com/Creyes17e/budget-tracker.git"
                 target="blank"
               >
                 Github Repo
