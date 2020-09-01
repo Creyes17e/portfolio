@@ -1,15 +1,13 @@
 import React, { Component } from "react";
 import "./style.css";
-import { Segment, Icon } from "semantic-ui-react";
+import { Menu, Icon } from "semantic-ui-react";
 
 class Footer extends Component {
   render() {
     return (
-      <Segment size="massive" color="teal">
-        <p className="footer">
-          &copy; Made with <Icon color="red" name="heart" />
-        </p>
-      </Segment>
+      <Menu size="large" color="teal" className="footer" fixed={"bottom"}>
+        &copy; Made with <Icon color="red" name="heart" />
+      </Menu>
     );
   }
 }

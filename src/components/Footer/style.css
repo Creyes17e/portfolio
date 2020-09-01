@@ -1,6 +1,5 @@
 .footer {
   color: black;
-  text-align: center;
-  font-size: medium;
-  padding: 0.5rem;
+  justify-content: center;
+  padding: 1rem;
 }

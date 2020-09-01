@@ -11,7 +11,7 @@ class Header extends Component {
     const { activeItem } = this.state;
 
     return (
-      <Segment className="nav" size="massive" color="teal">
+      <Segment className="nav" color="teal">
         <h1 className="myname">Carina Reyes</h1>
         <Menu size="large" pointing secondary color="teal">
           <Menu.Item
