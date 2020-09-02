@@ -3,21 +3,21 @@ import { Segment } from "semantic-ui-react";
 import MainForm from "../components/MainForm/index";
 
 const Contact = () => (
-  <Segment compact color="teal" className="segmentMain">
+  <div className="mainForm">
     <style>
       {`
       body{
-        background-color:white;
         background-color:rgb(27, 187, 187);
       }
-      .segmentMain{
-        margin-left:23rem !important;
+      .mainForm{
         margin-top:2rem !important;
+        padding-top:1.5rem;
+        padding-bottom:8rem;
       }
       `}
     </style>
     <MainForm />
-  </Segment>
+  </div>
 );
 
 export default Contact;
