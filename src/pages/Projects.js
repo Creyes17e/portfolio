@@ -17,7 +17,12 @@ const Projects = () => (
       }
       `}
     </style>
-    <Card.Group itemsPerRow={3} centered>
+    <Card.Group
+      itemsPerRow={4}
+      centered
+      stackable
+      style={{ paddingTop: "2rem", paddingBottom: "4rem" }}
+    >
       <Transition animation="bounce" duration={1200} visible transitionOnMount>
         <Card>
           <Image src={scheduler} />
@@ -116,7 +121,7 @@ const Projects = () => (
       </Transition>
       <Transition animation="bounce" duration={700} visible transitionOnMount>
         <Card>
-          <Image src={notetaker} />
+          <Image src={notetaker} size="massive" />
           <Card.Content textAlign="center">
             <Card.Header
               href="https://vast-shore-69093.herokuapp.com/"
