@@ -13,7 +13,7 @@ const Projects = () => (
     <style>
       {`
       body{
-        background-color:rgb(27, 187, 187);
+        background-color:rgba(27, 187, 187, 0.5);
       }
       `}
     </style>

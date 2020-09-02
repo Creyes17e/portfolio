@@ -6,7 +6,7 @@ class Footer extends Component {
   render() {
     return (
       <div>
-        <Menu size="large" color="teal" className="footer" fixed={"bottom"}>
+        <Menu size="large" className="footer" fixed={"bottom"} color="teal">
           &copy; Made with <Icon color="red" name="heart" />
         </Menu>
       </div>
