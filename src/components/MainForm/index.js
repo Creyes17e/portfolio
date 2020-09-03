@@ -4,7 +4,6 @@ import {
   Input,
   TextArea,
   Button,
-  Link,
   Grid,
   Card,
   Icon,
@@ -17,7 +16,7 @@ class MainForm extends Component {
       <Grid centered>
         <Transition
           animation="fade up"
-          duration={1800}
+          duration={1700}
           visible
           transitionOnMount
         >
@@ -72,7 +71,16 @@ class MainForm extends Component {
             </Card.Content>
 
             <Card.Content extra>
-              <Button icon basic color="teal">
+              <Button
+                as="a"
+                href="https://github.com/Creyes17e"
+                target="blank"
+                icon
+                basic
+                color="teal"
+                compact
+                circular
+              >
                 <Icon
                   name="github"
                   color="black"
@@ -81,28 +89,22 @@ class MainForm extends Component {
                   to="https://github.com/Creyes17e"
                 />
               </Button>
-              <Button icon basic color="teal">
+              <Button
+                as="a"
+                href="https://www.linkedin.com/in/carina-reyes-21b6701a2/"
+                target="blank"
+                icon
+                basic
+                color="teal"
+                compact
+                circular
+              >
                 <Icon name="linkedin" color="blue" size="large" />
               </Button>
             </Card.Content>
           </Card>
         </Transition>
       </Grid>
-
-      // // </Grid.Column>
-      // // {/* <Grid.Column>
-      //   <Icon
-      //     name="github square"
-      //     size="big"
-      //     href="https://github.com/Creyes17e"
-      //     target="blank"
-      //   />
-      //   <Icon
-      //     name="linkedin"
-      //     href="https://www.linkedin.com/in/carina-reyes-21b6701a2/"
-      //     target="blank"
-      //   />
-      // </Grid.Column> */}
     );
   }
 }

@@ -4,15 +4,11 @@ import {
   Image,
   Icon,
   Grid,
-  Card,
   Transition,
   Item,
-  Container,
-  Button,
   Divider,
 } from "semantic-ui-react";
-import mypic from "../assets/images/me.jpg";
-// import placeholder from "https://via.placeholder.com/150";
+import mypic from "../assets/images/mepic.jpg";
 
 const About = () => (
   <div className="BG">
@@ -29,24 +25,24 @@ const About = () => (
           <Item.Group>
             <Item style={{ padding: "1.5rem" }}>
               <Transition
-                duration={1500}
+                duration={2000}
                 visible
                 transitionOnMount
-                animation="shake"
+                animation="drop"
               >
                 <Image
                   src={mypic}
                   size="large"
                   className="aboutPic"
-                  circular
                   centered
+                  rounded
                   alt="a picture of myself"
                   style={{ marginRight: "2rem" }}
                 />
               </Transition>
               <Transition
-                animation="shake"
-                duration={1400}
+                animation="fly up"
+                duration={2000}
                 visible
                 transitionOnMount
               >
