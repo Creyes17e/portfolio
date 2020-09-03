@@ -61,9 +61,10 @@ class MainForm extends Component {
                   label="Email"
                   placeholder="mac@cheese.com"
                 />
-                <Form.Field
+                <Button
                   id="form-button-control-public"
-                  control={Button}
+                  as="a"
+                  href="mailto:cereyes1792@outlook.com"
                   content="Send"
                   color="teal"
                 />
