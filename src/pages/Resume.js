@@ -149,10 +149,11 @@ function Resume() {
             </Item.Header>
             <Item.Description style={{ padding: "1rem" }}>
               <List.Item as="li">HTML</List.Item>
-              <List.Item as="li">JavaScript</List.Item>
+              <List.Item as="li">JavaScript/ES6</List.Item>
+              <List.Item as="li">Jquery</List.Item>
               <List.Item as="li">CSS</List.Item>
               <List.Item as="li">MySQL</List.Item>
-              <List.Item as="li">NoSQL</List.Item>
+              <List.Item as="li">MongoDB</List.Item>
             </Item.Description>
             <Divider />
           </Item.Content>
