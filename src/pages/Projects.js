@@ -1,12 +1,12 @@
 import React from "react";
 import { Card, Image, Transition } from "semantic-ui-react";
-import burger from "../assets/images/burger.JPG";
-import scheduler from "../assets/images/scheduler.JPG";
-import project1 from "../assets/images/project1.JPG";
-import notetaker from "../assets/images/notetaker.JPG";
-import ideaexpo from "../assets/images/ideaexpo.JPG";
-import weather from "../assets/images/weather.PNG";
-import budget from "../assets/images/budget.JPG";
+import burger from "../assets/images/burger.jfif";
+import scheduler from "../assets/images/scheduler.jfif";
+import project1 from "../assets/images/project1.jfif";
+import notetaker from "../assets/images/notetaker.jfif";
+import ideaexpo from "../assets/images/ideaexpo.jfif";
+import weather from "../assets/images/weather.png";
+import budget from "../assets/images/budget.jfif";
 
 const Projects = () => (
   <div>
