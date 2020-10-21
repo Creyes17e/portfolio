@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import emailjs from "emailjs-com";
+import swal from "sweetalert2";
 import {
   Form,
   Input,
@@ -12,6 +14,31 @@ import {
 
 class MainForm extends Component {
   render() {
+    const handleFormSubmit = (e) => {
+      e.preventDefault();
+      emailjs
+        .sendForm(
+          process.env.REACT_APP_EMAILJS_SERVICE_ID,
+          process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+          e.target,
+          process.env.REACT_APP_EMAILJS_USER_ID
+        )
+        .then(
+          (result) => {
+            console.log(result.text);
+            swal.fire(
+              "Message Sent",
+              "Carina will get back to you as soon as she can!",
+              "success"
+            );
+          },
+          (error) => {
+            console.log(error.text);
+            swal.fire("Message Error", error.text, "error");
+          }
+        );
+      e.target.reset();
+    };
     return (
       <Grid centered>
         <Transition
@@ -27,48 +54,50 @@ class MainForm extends Component {
             }}
           >
             <Card.Content textAlign="left">
-              <h2>
-                Contact Me!{"  "}
-                <Icon name="comment alternate" color="black" size="small" />
-              </h2>
+              <h2>Contact Me!{"  "}</h2>
             </Card.Content>
             <Card.Content>
-              <Form>
-                <Form.Group widths="equal">
+              <div>
+                <Form onSubmit={handleFormSubmit}>
                   <Form.Field
                     id="form-input-control-first-name"
                     control={Input}
-                    label="First name"
-                    placeholder="First name"
+                    label="Name"
+                    placeholder="Full Name"
+                    required
+                    name="user_name"
+                    icon="user circle"
+                    iconPosition="left"
+                  />
+
+                  <Form.Field
+                    id="form-input-control-error-email"
+                    control={Input}
+                    htmlFor="Email"
+                    label="Email"
+                    placeholder="mac@cheese.com"
+                    required
+                    name="user_email"
+                    icon="mail"
+                    iconPosition="left"
                   />
                   <Form.Field
-                    id="form-input-control-last-name"
-                    control={Input}
-                    label="Last name"
-                    placeholder="Last name"
+                    id="form-textarea-control-opinion"
+                    control={TextArea}
+                    label="Message"
+                    placeholder="Message"
+                    required
+                    name="user_message"
                   />
-                </Form.Group>
-                <Form.Field
-                  id="form-textarea-control-opinion"
-                  control={TextArea}
-                  label="Message"
-                  placeholder="Message"
-                />
-                <Form.Field
-                  id="form-input-control-error-email"
-                  control={Input}
-                  htmlFor="Email"
-                  label="Email"
-                  placeholder="mac@cheese.com"
-                />
-                <Button
-                  id="form-button-control-public"
-                  as="a"
-                  href="mailto:cereyes1792@outlook.com"
-                  content="Send"
-                  color="teal"
-                />
-              </Form>
+                  <Button
+                    id="form-button-control-public"
+                    as="a"
+                    content="Send"
+                    color="teal"
+                    icon="send"
+                  />
+                </Form>
+              </div>
             </Card.Content>
 
             <Card.Content extra>
