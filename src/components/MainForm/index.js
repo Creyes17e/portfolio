@@ -89,13 +89,7 @@ class MainForm extends Component {
                     required
                     name="user_message"
                   />
-                  <Button
-                    id="form-button-control-public"
-                    as="a"
-                    content="Send"
-                    color="teal"
-                    icon="send"
-                  />
+                  <Button label="Send Message" color="teal" icon="send" />
                 </Form>
               </div>
             </Card.Content>
